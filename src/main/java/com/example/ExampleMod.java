@@ -28,3 +28,4 @@ public class ExampleMod implements ModInitializer {
 		return Identifier.fromNamespaceAndPath(MOD_ID, path);
 	}
 }
+ 
