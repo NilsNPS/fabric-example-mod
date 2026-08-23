@@ -1,5 +1,5 @@
 plugins {
-	id 'net.fabricmc.loom' version '1.7-SNAPSHOT'
+	id 'net.fabricmc.loom' version "${loom_version}"
 	id 'maven-publish'
 }
 
@@ -28,7 +28,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	// Wichtig: Gibt die Klassen explizit an das Client-Source-Set weiter
+	// Bindet die API-Abhängigkeiten direkt im Client-Scope ein
 	clientImplementation sourceSets.main.output
 	clientImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
