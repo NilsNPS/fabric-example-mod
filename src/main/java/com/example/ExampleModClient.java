@@ -15,7 +15,6 @@ public class ExampleModClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        // 1. HUD Rendering (Herz & Ausrufezeichen)
         HudRenderCallback.EVENT.register((drawContext, tickCounterRef) -> {
             MinecraftClient client = MinecraftClient.getInstance();
             if (client.player == null || client.player.isCreative() || client.player.isSpectator()) return;
@@ -41,7 +40,6 @@ public class ExampleModClient implements ClientModInitializer {
             }
         });
 
-        // 2. Sound-System (Herzklopfen)
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
             float health = client.player.getHealth();
