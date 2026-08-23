@@ -1,8 +1,7 @@
 plugins {
-	id 'net.fabricmc.loom' version "${loom_version}"
-	id 'maven-publish'
+    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+    id 'maven-publish'
 }
-
 repositories {
 	mavenCentral()
 	maven {
