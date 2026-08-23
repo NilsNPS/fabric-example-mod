@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version "${loom_version}"
+	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
 	id 'maven-publish'
 }
 
@@ -28,7 +28,6 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 
-	// Exponiert die Abhängigkeiten für das Client-Source-Set
 	clientImplementation sourceSets.main.output
 	clientImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 }
