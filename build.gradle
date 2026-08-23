@@ -1,7 +1,8 @@
 plugins {
-    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
-    id 'maven-publish'
+	id 'net.fabricmc.loom' version "${loom_version}"
+	id 'maven-publish'
 }
+
 repositories {
 	mavenCentral()
 	maven {
@@ -22,7 +23,7 @@ loom {
 
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings loom.officialMojangMappings()
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API
