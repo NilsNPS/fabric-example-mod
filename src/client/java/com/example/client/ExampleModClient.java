@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
+import net.minecraft.client.gui.DrawContext;
 
 public class ExampleModClient implements ClientModInitializer {
 
@@ -47,7 +48,7 @@ public class ExampleModClient implements ClientModInitializer {
                     drawContext.drawTextWithShadow(font, warningText, textX, textY, 0xFF0000);
                 }
             } catch (Throwable ignored) {
-                // Fängt jeden Rendering-Fehler lautlos ab, um Abstürze zu verhindern
+                // Fängt jeden Rendering-Fehler ab
             }
         });
     }
